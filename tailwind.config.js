@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 module.exports = {
   future: {
     // removeDeprecatedGapUtilities: true,
@@ -8,5 +9,5 @@ module.exports = {
     extend: {},
   },
   variants: {},
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 }

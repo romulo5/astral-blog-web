@@ -7,35 +7,17 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-// import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "./header"
+import Footer from "./footer"
 import "../styles/layout.css"
 
 const Layout = ({ children }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     sanitySiteSettings {
-  //       title
-  //       image {
-  //         asset {
-  //           url
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <>
       <Header />
       <div className="flex flex-col items-center">
-        <main className="flex w-3/4 bg-green-400">{children}</main>
-        <footer className="flex mt-2">
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <main className="mx-2 md:mx-0 md:w-4/5 xl:w-3/5">{children}</main>
+        <Footer />
       </div>
     </>
   )

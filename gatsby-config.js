@@ -1,3 +1,6 @@
+require("dotenv").config()
+const clientConfig = require("./client-config")
+
 module.exports = {
   siteMetadata: {
     title: `gatsby`,
@@ -30,8 +33,7 @@ module.exports = {
     {
       resolve: "gatsby-source-sanity",
       options: {
-        projectId: "n5jz1yup",
-        dataset: "production",
+        ...clientConfig.sanity,
         // a token with read permissions is required
         // if you have a private dataset
         token: process.env.MY_SANITY_TOKEN,
@@ -39,6 +41,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
