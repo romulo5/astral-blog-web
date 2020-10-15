@@ -143,7 +143,6 @@ const PostList = () => {
       {/* <h1 className="pb-3">Posts recentes</h1> */}
       {posts &&
         posts.map(post => {
-          console.log(post)
           return <PostPreview key={post.id} {...post} />
         })}
     </div>

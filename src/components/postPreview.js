@@ -7,17 +7,12 @@ import { buildImageObj } from "../utils/helpers"
 import { imageUrlFor } from "../utils/image-url"
 import PortableText from "./portableText"
 
-function truncate(str, n) {
-  return str.length > n ? `${str.substr(0, n - 1)} ...` : str
-}
-
 const PostPreview = post => {
   const date = new Date(post.publishedAt)
-  console.log(truncate(post._rawExcerpt[0].children[0].text, 80))
   return (
     <div key={post.id} className="p-2 mb-2">
       <article className="">
-        <div className="flex transition duration-200 ease-in-out transform hover:-translate-y-1">
+        <div className="flex transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl ">
           <div className="flex justify-center items-center w-2/5 ">
             <Link to="#" className="hover:shadow-none">
               {post.mainImage && post.mainImage.asset && (
