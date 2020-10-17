@@ -43,30 +43,14 @@ const Header = () => {
     }
   `)
 
-  // const [stickyHeader, setStickyHeader] = useState(false)
-
   const [isSticky, setSticky] = useState(false)
   const [height, setHeight] = useState({})
-  // const changeHeader = () => {
-  //   if (window.scrollY > 200) {
-  //     setStickyHeader(true)
-  //   } else {
-  //     setStickyHeader(false)
-  //   }
-  //   console.log(stickyHeader)
-  // }
-  // window.addEventListener("scroll", changeHeader)
 
   const handleScroll = () => {
     let off = 0
-    if (
-      window.pageYOffset > navbar.offsetTop
-      // window.pageYOffset > header.nextElementSibling.offsetHeight
-    ) {
-      // setOffset(header.nextElementSibling.offsetHeight)
+    if (window.pageYOffset > navbar.offsetTop) {
       setSticky(true)
       off = header.nextElementSibling.offsetHeight - navbar.offsetHeight
-      // console.log(`navbar: ${navbar.offsetTop}`)
     } else {
       setHeight({ heightValue: `${header.offsetHeight}px` })
     }

@@ -27,8 +27,8 @@
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.19",
     "stylelint-prettier": "^1.1.2",
-    "typography": "^0.16.19",
-    "typography-theme-de-young": "^0.16.19"
+    "typography": "^0.16.19"
+    
   },
   "devDependencies": {
     "-": "0.0.1",

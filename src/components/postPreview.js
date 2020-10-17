@@ -61,7 +61,7 @@ const PostPreview = post => {
             </div>
             <div className="flex mb-3">
               <Link to="#" className="hover:shadow-none ">
-                <h5 className="hover:text-gray-600">{post.title}</h5>
+                <h4 className="hover:text-gray-600 text-xl">{post.title}</h4>
               </Link>
             </div>
             {post._rawExcerpt && (
